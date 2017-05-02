@@ -20,7 +20,7 @@ int main() {
 	sockaddr_in server;
 	server.sin_family = AF_INET;
 	server.sin_port = htons(12345);
-	inet_pton(AF_INET, "127.0.0.1", &server.sin_addr);
+	inet_pton(AF_INET, "10.200.12.86", &server.sin_addr);
 	
 	error = connect(sock, reinterpret_cast<const sockaddr*>(&server), sizeof(server));
 	if (error) {
